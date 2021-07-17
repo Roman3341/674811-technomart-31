@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  font-family: 'Cuprum', sans-serif;
+  font-family: "Cuprum", "Arial", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: grayscale;
@@ -83,15 +83,23 @@ img {
 
 .header-top-content {
   display: flex;
+  position: relative;
+  justify-content: flex-end;
 }
 
 .header-top .logo {
-  display: block;
-  font-size: 21px;
-  padding: 9px 62px;
-  box-shadow: 0px 5px 0 0 rgba(177, 5, 5, 0.74);
-  background-color: #ee3643;
-  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.header-top .logo::before {
+  content: url("../img/svg/logo-letters.svg");
+  position: absolute;
+  top: 12px;
+  left: 56px;
+  z-index: 20;
 }
 
 .search-form {
@@ -139,7 +147,7 @@ img {
   opacity: 1;
 }
 
-.search:focus + .search-icon {
+.search:focus+.search-icon {
   fill: #ee3643;
   opacity: 1;
 }
@@ -173,7 +181,7 @@ img {
 .marker::before {
   position: absolute;
   left: 17px;
-  content: url(img/index/icon-bookmark.svg);
+  content: url(../img/svg/icon-bookmark.svg);
   opacity: 0.3;
   margin-right: 11px;
 }
@@ -188,7 +196,7 @@ img {
 .cart::before {
   position: absolute;
   left: 18px;
-  content: url(img/index/icon-cart.svg);
+  content: url(../img/svg/icon-cart.svg);
   opacity: 0.3;
   margin-right: 17px;
 }
@@ -273,7 +281,7 @@ h1 {
 }
 
 .contact-field::before {
-  content: url(img/index/icon-phone.svg);
+  content: url(../img/svg/icon-phone.svg);
   width: 19px;
   height: 19px;
   margin-top: auto;
@@ -315,13 +323,13 @@ h1 {
 
 .enter-button::before,
 .enter-button:active::before {
-  content: url(img/index/icon-login-gray.svg);
+  content: url(../img/svg/icon-login-gray.svg);
   width: 20px;
   height: 17px;
 }
 
 .enter-button:hover::before {
-  content: url(img/index/icon-login.svg);
+  content: url(../img/icon-login.svg);
 }
 
 .enter-button {
@@ -447,8 +455,8 @@ h1 {
 .new::before {
   position: absolute;
   top: 0;
-  right: 0;
-  content: url(img/index/new-flag.png);
+  right: 10px;
+  content: url(../img/svg/new-flag.svg);
   width: 60px;
   height: 60px;
   z-index: 10;
@@ -521,6 +529,7 @@ button {
   display: block;
   transition: 3s;
 }
+
 .open-catalog {
   position: absolute;
   display: inline-block;
@@ -638,18 +647,23 @@ button {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 70px;
 }
 
 .tool-list-index li,
 .tool-list li {
   position: relative;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", "sans-serif";
   display: flex;
   flex-direction: column;
-  width: 218px;
+  width: 220px;
   height: 318px;
   border: solid 1px #e5e5e5;
+}
+
+.tool-list li {
   margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 .tool-list-index li:hover,
@@ -703,7 +717,7 @@ button {
   position: absolute;
   top: 13px;
   left: 12px;
-  content: url(img/index/icon-cart.svg);
+  content: url(../img/svg/icon-cart.svg);
   opacity: 0.3;
   margin-right: 17px;
 }
@@ -764,39 +778,39 @@ button {
 }
 
 .bosch {
-  background-image: url(img/index/bosch.png);
+  background-image: url(../img/bosch.png);
   margin-bottom: 20px;
 }
 
 .makita {
-  background-image: url(img/index/makita.png);
+  background-image: url(../img/makita.png);
   margin-bottom: 20px;
 }
 
 .dewalt {
-  background-image: url(img/index/dewalt.png);
+  background-image: url(../img/dewalt.png);
   margin-bottom: 20px;
 }
 
 .interskol {
-  background-image: url(img/index/interskol.png);
+  background-image: url(../img/interskol.png);
   margin-bottom: 20px;
 }
 
 .hitachi {
-  background-image: url(img/index/hitachi.png);
+  background-image: url(../img/hitachi.png);
 }
 
 .lg {
-  background-image: url(img/index/lg.png);
+  background-image: url(../img/lg.png);
 }
 
 .aeg {
-  background-image: url(img/index/aeg.png);
+  background-image: url(../img/aeg.png);
 }
 
 .metabo {
-  background-image: url(img/index/metabo.png);
+  background-image: url(../img/metabo.png);
 }
 
 /*Индекс. Преимущества*/
@@ -815,7 +829,7 @@ button {
 
 .feauters-list::before {
   position: absolute;
-  content: url(img/index/shadow.png);
+  content: url(../img/shadow.png);
   width: 10px;
   height: 279px;
   top: -46px;
@@ -855,6 +869,7 @@ button {
   background-color: #32425c;
   color: #ffffff;
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+  font-weight: 700;
 }
 
 .feauters-list-link:hover {
@@ -928,7 +943,7 @@ button {
 
 .feauter-text {
   font-size: 13px;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", "sans-serif";
   line-height: 24px;
   width: 398px;
   margin-bottom: 74px;
@@ -964,9 +979,10 @@ button {
 .contacts h2 {
   font-weight: normal;
   font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
 }
 
 .technomart-company {
@@ -979,10 +995,18 @@ button {
 .contacts p {
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", "sans-serif";
   font-size: 13px;
-  line-height: 1.8;
-  margin-bottom: 35px;
+  line-height: 20px;
+  width: 460px;
+}
+
+.technomart-company p:first-of-type {
+  margin-bottom: 47px;
+}
+
+.contacts p {
+  margin-bottom: 32px;
 }
 
 .contacts {
@@ -992,20 +1016,22 @@ button {
 }
 
 .contacts img {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .transport-companies {
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .transport-companies li {
   display: flex;
+  font-size: 18px;
+  line-height: 24px;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .transport-companies li:last-child {
@@ -1221,6 +1247,7 @@ button {
 .form-fields-label {
   cursor: pointer;
 }
+
 .name-field {
   display: flex;
   flex-direction: column;
@@ -1285,7 +1312,7 @@ button {
 
 .send-mail {
   cursor: pointer;
-  font-family: 'Cuprum';
+  font-family: "Cuprum", "Arial", "sans-serif";
   text-transform: uppercase;
   background-color: #ee3643;
   color: #ffffff;
@@ -1373,7 +1400,7 @@ button {
 
 .cart-modal::after {
   position: absolute;
-  content: url(img/index/modal-check.svg);
+  content: url(../img/modal-check.svg);
   top: 88px;
   left: 81px;
   width: 66px;
@@ -1390,7 +1417,7 @@ button {
 }
 
 .cart-modal-make-order {
-  font-family: 'Cuprum';
+  font-family: "Cuprum", "Arial", "sans-serif";
   text-transform: uppercase;
   background-color: #ee3643;
   color: #ffffff;
@@ -1410,7 +1437,7 @@ button {
 }
 
 .cart-modal-continue {
-  font-family: 'Cuprum';
+  font-family: "Cuprum", "Arial", "sans-serif";
   text-transform: uppercase;
   background-color: #ffffff;
   border-radius: 3px;
@@ -1554,7 +1581,7 @@ button {
 }
 
 .breadcrumbs a::after {
-  content: url(img/index/icon-right-small.svg);
+  content: url(../img/svg/icon-right-small.svg);
   margin: auto 15px;
 }
 
@@ -1584,7 +1611,7 @@ button {
 .filters-title,
 .sorting-title {
   text-transform: uppercase;
-  font-family: 'PT Sans', 'Arial', 'sans-serif';
+  font-family: "PT Sans", "Arial", "sans-serif";
   font-size: 13px;
   line-height: 18px;
   margin-top: auto;
@@ -1609,7 +1636,7 @@ button {
 
 .sorting-list a {
   text-transform: uppercase;
-  font-family: 'PT Sans', 'Arial', 'sans-serif';
+  font-family: "PT Sans", "Arial", "sans-serif";
   font-size: 13px;
   line-height: 18px;
   text-decoration: underline;
@@ -1739,7 +1766,7 @@ button {
 .price-controls input {
   width: 90px;
   padding: 8px 10px;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", "sans-serif";
   font-size: 16px;
   text-align: center;
   color: #283136;
@@ -1770,7 +1797,7 @@ button {
 
 .filters-legend {
   font-size: 17px;
-  font-family: 'PT Sans', 'Arial', 'sans-serif';
+  font-family: "PT Sans", "Arial", "sans-serif";
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -1794,7 +1821,7 @@ button {
 .checkbox-list li {
   display: flex;
   position: relative;
-  font-family: 'PT Sans', 'Arial', 'sans-serif';
+  font-family: "PT Sans", "Arial", "sans-serif";
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
@@ -1815,8 +1842,8 @@ button {
   padding-left: 30px;
 }
 
- input[type="checkbox"]+label::before {
-  content: url(img/index/checkbox-off.svg);
+input[type="checkbox"]+label::before {
+  content: url(../img/svg/checkbox-off.svg);
   position: absolute;
   display: inline-block;
   vertical-align: middle;
@@ -1827,13 +1854,13 @@ button {
 }
 
 input[type="checkbox"]:checked+label::before {
-  content: url(img/index/checkbox-on.svg);
+  content: url(../img/svg/checkbox-on.svg);
   width: 27px;
 }
 
 /*Радио чек*/
 .radio-field input[type="radio"]+label::before {
-  content: url(img/index/radio-off.svg);
+  content: url(../img/svg/radio-off.svg);
   position: absolute;
   display: inline-block;
   vertical-align: middle;
@@ -1844,7 +1871,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .radio-field input[type="radio"]:checked+label::before {
-  content: url(img/index/radio-on.svg);
+  content: url(../img/svg/radio-on.svg);
   width: 27px;
 }
 
@@ -1856,10 +1883,11 @@ input[type="checkbox"]:checked+label::before {
 .radio-slider-button {
   cursor: pointer;
 }
+
 /*Кнопка "показать*/
 .filter-button {
   font-size: 13px;
-  font-family: 'PT Sans', 'Arial', 'sans-serif';
+  font-family: "PT Sans", "Arial", "sans-serif";
   line-height: 18px;
   text-transform: uppercase;
   padding: 9px 38px;
@@ -1879,14 +1907,13 @@ input[type="checkbox"]:checked+label::before {
   margin: 0;
   list-style: none;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   width: 700px;
 }
 
 .tool-name {
   font-size: 17px;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", "sans-serif";
   font-weight: bold;
   margin: 0 32px;
   text-align: center;
@@ -1900,7 +1927,7 @@ input[type="checkbox"]:checked+label::before {
   margin-right: auto;
   margin-bottom: 15px;
   text-decoration: line-through;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", "sans-serif";
   font-size: 17px;
   font-weight: bold;
 }
@@ -1911,7 +1938,7 @@ input[type="checkbox"]:checked+label::before {
   margin: auto auto 0 auto;
   background-color: #ee3643;
   color: #ffffff;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", "sans-serif";
   font-size: 17px;
   line-height: 1.06;
   font-weight: bolder;
@@ -1929,10 +1956,12 @@ input[type="checkbox"]:checked+label::before {
   border-left: 20px solid #ee3643;
 }
 
-.tool-list li:nth-child(7),
-.tool-list li:nth-child(8),
-.tool-list li:nth-child(9) {
+.tool-list li:nth-last-child(-n+3) {
   margin-bottom: 0px;
+}
+
+.tool-list li:nth-child(3n) {
+  margin-right: 0px;
 }
 
 /*Пагинация*/
@@ -1948,7 +1977,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .catalog-list a {
-  font-family: 'PT Sans', 'Arial', 'sans-serif';
+  font-family: "PT Sans", "Arial", "sans-serif";
   display: block;
   text-align: center;
   width: 38px;
@@ -2004,10 +2033,11 @@ input[type="checkbox"]:checked+label::before {
 .some-words p {
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', 'Arial', 'sans-serif';
+  font-family: "PT Sans", "Arial", "sans-serif";
   font-size: 13px;
   line-height: 24px;
 }
+
 /*Радио кнопки на слайдере*/
 .slider-buttons-list {
   padding: 0;
@@ -2026,11 +2056,11 @@ input[type="checkbox"]:checked+label::before {
   display: none;
 }
 
-input[type="radio"] + label {
+input[type="radio"]+label {
   position: relative;
 }
 
-input[type="radio"] + label::before {
+input[type="radio"]+label::before {
   content: "";
   position: absolute;
   bottom: 2px;
@@ -2040,7 +2070,7 @@ input[type="radio"] + label::before {
   background-color: #ffffff;
 }
 
-input[type="radio"] + label::after {
+.slider input[type="radio"]+label::after {
   content: "";
   position: absolute;
   left: 2px;
@@ -2052,6 +2082,6 @@ input[type="radio"] + label::after {
   opacity: 0;
 }
 
-input[type="radio"]:checked + label::after {
+input[type="radio"]:checked+label::after {
   opacity: 1;
 }
