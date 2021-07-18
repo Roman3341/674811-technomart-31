@@ -16,8 +16,8 @@
   <header class="header">
     <section class="header-top">
       <div class="container header-top-content">
-        <a href="index.html" class="logo" aria-label="Лого"><img src="../674811-technomart-31/img/svg/logo.svg"
-            alt="Логотип" width="220" height="47"></a>
+        <a href="index.html" class="logo" aria-label="Лого"><img src="./img/svg/logo.svg" alt="Логотип" width="220"
+            height="47"></a>
         <form action="https://echo.htmlacademy.ru" method="GET" class="search-form">
           <label for="search-field" class="search-label">
             <input type="search" class="search" id="search-field" name="search-query" placeholder="Поиск:">
@@ -37,7 +37,7 @@
         <h3 class="visually-hidden">Нижняя часть хэдера</h3>
         <h1>Интернет-магазин строительных материалов<br> и инструментов для ремонта</h1>
         <div class="contact-information">
-          <p class="contact-field"><a href="tel:+7(812)555-05-55" class="call-number">+7 (812) 555-05-55</a></p>
+          <p class="contact-field"><a href="tel:+78125550555" class="call-number">+7 (812) 555-05-55</a></p>
           <p>
             <span class="adress">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</span>
           </p>
@@ -63,70 +63,64 @@
   <main>
     <section class="main-services container">
       <h2 class="visually-hidden">Услуги</h2>
-      <div class="services-left">
-        <div class="services-item services-item-yellow new">
-          <h3>Материалы</h3>
-          <a href="#">На любой вкус</a>
-          <img class="services-icon" src="img/svg/icon-1.svg" alt="Картинка раздела" width="78" height="72">
-        </div>
-        <div class="services-item services-item-blue">
-          <h3>Инструмент</h3>
-          <a href="#">На все случаи</a>
-          <img class="services-icon" src="img/svg/icon-2.svg" alt="Картинка раздела" width="78" height="72">
-        </div>
-        <div class="slider">
-          <ul class="slider-list">
-            <li class="slider-item-first slider-show">
-              <div class="slider-header">
-                <h3 class="slider-title">Дрели</h3>
-                <span class="slider-text">Соседям на радость!</span>
-              </div>
-              <img src="img/slide-2.jpg" alt="Первый слайд" width="620" height="266">
-              <a href="catalog.html" class="open-catalog">Открыть каталог</a>
+      <div class="services-item services-item-yellow new">
+        <h3>Материалы</h3>
+        <a href="#">На любой вкус</a>
+        <img class="services-icon" src="img/svg/icon-1.svg" alt="Картинка раздела" width="78" height="72">
+      </div>
+      <div class="services-item services-item-blue">
+        <h3>Инструмент</h3>
+        <a href="#">На все случаи</a>
+        <img class="services-icon" src="img/svg/icon-2.svg" alt="Картинка раздела" width="78" height="72">
+      </div>
+      <div class="slider">
+        <ul class="slider-list">
+          <li class="slider-item-first slider-show">
+            <div class="slider-header">
+              <h3 class="slider-title">Дрели</h3>
+              <span class="slider-text">Соседям на радость!</span>
+            </div>
+            <img src="img/slide-2.jpg" alt="Первый слайд" width="620" height="266">
+            <a href="catalog.html" class="open-catalog">Открыть каталог</a>
+          </li>
+          <li class="slider-item-second ">
+            <div class="slider-header">
+              <h3 class="slider-title">Перфараторы</h3>
+              <span class="slider-text">Настоящие мужские игрушки</span>
+            </div>
+            <img src="img/slide-1.jpg" alt="Второй слайд" width="620" height="266">
+            <a href="catalog.html" class="open-catalog">Открыть каталог</a>
+          </li>
+        </ul>
+        <button type="button" class="slider-button slider-button-left"><img src="img/svg/icon-left.svg"
+            alt="Иконка предыдущего слайда" aria-label="Предыдущий слайд" width="22" height="40"></button>
+        <button type="button" class="slider-button slider-button-right"><img src="img/svg/icon-right.svg"
+            alt="Иконка следующего сайта" aria-label="Следующий слайд" width="22" height="40"></button>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <ul class="slider-buttons-list">
+            <li>
+              <label class="slider-small-button" for="radio-slider-button-left"></label>
             </li>
-            <li class="slider-item-second ">
-              <div class="slider-header">
-                <h3 class="slider-title">Перфараторы</h3>
-                <span class="slider-text">Настоящие мужские игрушки</span>
-              </div>
-              <img src="img/slide-1.jpg" alt="Второй слайд" width="620" height="266">
-              <a href="catalog.html" class="open-catalog">Открыть каталог</a>
+            <li>
+              <label for="radio-slider-button-right" class="radio-slider-button-label"></label>
             </li>
           </ul>
-          <button type="button" class="slider-button slider-button-left"><img src="img/svg/icon-left.svg"
-              alt="Иконка предыдущего слайда" aria-label="Предыдущий слайд" width="22" height="40"></button>
-          <button type="button" class="slider-button slider-button-right"><img src="img/svg/icon-right.svg"
-              alt="Иконка следующего сайта" aria-label="Следующий слайд" width="22" height="40"></button>
-          <form action="https://echo.htmlacademy.ru" method="get">
-            <ul class="slider-buttons-list">
-              <li>
-                <input type="radio" name="radio-slider" id="radio-slider-button-left" value="first-slide" checked>
-                <label for="radio-slider-button-left"></label>
-              </li>
-              <li>
-                <input type="radio" name="radio-slider" id="radio-slider-button-right" value="first-slide">
-                <label for="radio-slider-button-right" class="radio-slider-button-label"></label>
-              </li>
-            </ul>
-          </form>
-        </div>
+        </form>
       </div>
-      <div class="services-right">
-        <div class="services-item services-item-purple">
-          <h3>Техника</h3>
-          <a href="#">Для стройки</a>
-          <img class="services-icon" src="img/svg/icon-3.svg" alt="Картинка раздела" width="78" height="72">
-        </div>
-        <div class="services-item services-item-green">
-          <h3>Скидки 50%</h3>
-          <a href="#">На 350 товаров</a>
-          <img class="services-icon" src="img/svg/icon-4.svg" alt="Иконка раздела" width="78" height="72">
-        </div>
-        <div class="services-item services-item-yellow">
-          <h3>Доставка</h3>
-          <a href="#">Бесплатно</a>
-          <img class="services-icon" src="img/svg/icon-5.svg" alt="Иконка раздела" width="78" height="72">
-        </div>
+      <div class="services-item services-item-purple">
+        <h3>Техника</h3>
+        <a href="#">Для стройки</a>
+        <img class="services-icon" src="img/svg/icon-3.svg" alt="Картинка раздела" width="78" height="72">
+      </div>
+      <div class="services-item services-item-green">
+        <h3>Скидки 50%</h3>
+        <a href="#">На 350 товаров</a>
+        <img class="services-icon" src="img/svg/icon-4.svg" alt="Иконка раздела" width="78" height="72">
+      </div>
+      <div class="services-item services-item-yellow">
+        <h3>Доставка</h3>
+        <a href="#">Бесплатно</a>
+        <img class="services-icon" src="img/svg/icon-5.svg" alt="Иконка раздела" width="78" height="72">
       </div>
     </section>
     <section class="container">
@@ -253,10 +247,10 @@
       <h2 class="visually-hidden">О нас</h2>
       <div class="technomart-company">
         <h2>Компания "Техномарт"</h2>
-          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
-            строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br>
-            Техномарт работает со смногими транспортными компаниями: </p>
+        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
+          строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br>
+          Техномарт работает со смногими транспортными компаниями: </p>
         <ul class="transport-companies">
           <li>Деловые линии</li>
           <li>Автотрейдинг</li>
